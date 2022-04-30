@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Texting Adventure</title>
+  </head>
+  <body>
+     
+    <div id="holder"></div>
+    
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="texting-adventure.js"></script>
+    <script>
+      jQuery(document).ready(function($){
+        
+
+        const messagesJSON = [
+          {
+            "id": 10,
+            "message": "Hey, you up?",
+            "who": "from them",
+            "delay": 0.5,
+            "choices": [
+                {"option": "Yes, I'm awake", "ifChosenGoTo":20},
+                {"option": "No, I'm asleep", "ifChosenGoTo":30}
+            ]
+          },
+          {
+            "id": 20,
+            "message": "Yeah, I'm awake. What do you want?",
+            "who": "from me",
+            "delay": 0.5,
+            "goto": 40
+          },
+          {
+            "id": 30,
+            "message": "I was sleeping... is it important?",
+            "who": "from me",
+            "delay": 0.5,
+            "goto": 40
+          },
+          {
+            "id": 40,
+            "message": "I need to tell you something important. I've been dealing with some issues lately and I wanted to get your take.",
+            "who": "from them",
+            "delay": 0.5,
+            "goto": 50
+          },
+          {
+            "id": 50,
+            "message": "I think I need some help.",
+            "who": "from them",
+            "delay":0.5,
+            "choices": [
+                {"option": "Of course!", "delay":0, "ifChosenGoTo":60},
+            ]
+          },
+          {
+            "id": 60,
+            "message": "I'm always here for you. What's going on?",
+            "who": "from me",
+            "delay": 0.5,
+            "goto": 70
+          },
+          {
+            "id": 70,
+            "message": "I'm in a dangerous situation.",
+            "who": "from them",
+            "delay": 0.5,
+            "goto": 80
+          },
+          {
+            "id": 80,
+            "choices": [
+                {"option": "I'm not sure what to say"},
+                {"option": "I'm here to help you!"}
+            ]
+          }
+        ];
+        
+        
+        //activate
+        $("#holder").textingAdventure(messagesJSON);
+        
+        
+
+      });
+    </script>
+  </body>
+</html>
