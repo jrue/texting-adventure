@@ -20,7 +20,7 @@
             "id": 10,
             "message": "Hey, you up?",
             "who": "from them",
-            "delay": 0.5,
+            "delay": 2,
             "choices": [
                 {"option": "Yes, I'm awake", "ifChosenGoTo":20},
                 {"option": "No, I'm asleep", "ifChosenGoTo":30}
@@ -28,30 +28,30 @@
           },
           {
             "id": 20,
-            "message": "Yeah, I'm awake. What do you want?",
+            "message": "👍🏽 👍🏽",
             "who": "from me",
-            "delay": 0.5,
+            "delay": 2,
             "goto": 40
           },
           {
             "id": 30,
-            "message": "I was sleeping... is it important?",
+            "message": "🥱",
             "who": "from me",
-            "delay": 0.5,
+            "delay": 3,
             "goto": 40
           },
           {
             "id": 40,
             "message": "I need to tell you something important. I've been dealing with some issues lately and I wanted to get your take.",
             "who": "from them",
-            "delay": 0.5,
+            "delay": 2,
             "goto": 50
           },
           {
             "id": 50,
             "message": "I think I need some help.",
             "who": "from them",
-            "delay":0.5,
+            "delay":0,
             "choices": [
                 {"option": "Of course!", "delay":0, "ifChosenGoTo":60},
             ]
@@ -60,14 +60,14 @@
             "id": 60,
             "message": "I'm always here for you. What's going on?",
             "who": "from me",
-            "delay": 0.5,
+            "delay": 2,
             "goto": 70
           },
           {
             "id": 70,
             "message": "I'm in a dangerous situation.",
             "who": "from them",
-            "delay": 0.5,
+            "delay": 2,
             "goto": 80
           },
           {

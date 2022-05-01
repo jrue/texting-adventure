@@ -77,3 +77,9 @@ const messagesJSON = [
 $("#holder").textingAdventure(messagesJSON);
 ```
 
+You can add a few options when activating by passing in a second argument.
+
+```javascript
+//green bubbles, to reprsent non-ios device
+$("#holder").textingAdventure(messagesJSON, {textMessageColor: "#43CC47", messageTails:false})
+```
